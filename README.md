@@ -6,12 +6,12 @@ Convert **Airtable CSV exports** of the Catalist schema into the **canonical MAP
 
 ## 📁 Repo Layout
 
-| Path         | What it holds                                                              |
-| ------------ | -------------------------------------------------------------------------- |
-| `notebooks/` |  `MAP_Migration_Pipeline.ipynb` – the guided notebook                      |
-| `data/`      | **Ignored** folder for `MAP Types-Grid View.csv` or any other private CSVs  |
-| `generated/` | JSON output files like `catalist_schema_YYYYMMDD_HHMMSS.json`              |
-| `.gitignore` | already excludes `data/` and timestamped JSONs                             |
+| Path         | What it holds                                                               |
+|--------------|-----------------------------------------------------------------------------|
+| `notebooks/` |  `MAP_Migration_Pipeline.ipynb` – the guided notebook                       |
+| `data/`      | **Ignored** folder for `MAP Types-Grid view.csv` or any other private CSVs  |
+| `output/`    | JSON output files like `catalist_schema_YYYYMMDD_HHMMSS.json`               |
+| `.gitignore` | already excludes `data/` and timestamped JSONs                              |
 
 ---
 
@@ -26,14 +26,14 @@ pip install pandas jupyterlab
 
 ## 🚀 Running the Pipeline
 
-1. **Export** your MAP Types Airtable view to CSV and save it as `data/MAP Types-Grid View.csv`.
+1. **Export** your MAP Types Airtable view to CSV and save it as `data/MAP Types-Grid view.csv`.
 2. Launch Jupyter:
 
    ```bash
    jupyter lab
    ```
 3. Open `notebooks/MAP_Migration_Pipeline.ipynb` and run all cells top‑to‑bottom.
-4. When complete, a timestamped JSON (e.g. `generated/catalist_schema_20250609_143500.json`) appears in `generated/`.
+4. When complete, a timestamped folder appears in `output/` that contains the JSON files.
 
 ---
 
